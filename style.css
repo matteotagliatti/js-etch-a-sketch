@@ -97,3 +97,42 @@ button.active {
     width: 500px;
     height: 500px;
 }
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 0px;
+        color: var(--black);
+    }
+
+    .settings {
+        background-color: transparent;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        width: 25%;
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        color: var(--grey);
+    }
+
+    button.active {
+        background-color: var(--grey);
+        border: 1px solid var(--grey);
+        color: var(--black);
+    }
+
+    .grid {
+        width: 400px;
+        height: 400px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+  }

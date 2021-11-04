@@ -39,13 +39,12 @@ const clearBtn = document.getElementById('clearBtn')
 const sizeValue = document.getElementById('sizeValue')
 const sizeSlider = document.getElementById('sizeSlider')
 
-// onclick
+// events
 colorPicker.onchange = (e) => currentColor = e.target.value
 colorBtn.onclick = () => setCurrentMode('color')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
 eraserBtn.onclick = () => setCurrentMode('eraser')
 clearBtn.onclick = () => reloadGrid()
-sizeValue.onlick = () => updateSizeValue()
 sizeSlider.onchange = (e) => changeSize(e.target.value)
 
 // create grid
@@ -87,8 +86,8 @@ function changeSize(size) {
 }
 
 // updateSizeValue
-function updateSizeValue(currentSize) {
-    sizeValue.innerHTML = `${currentSize} x ${currentSize}`
+function updateSizeValue(size) {
+    sizeValue.innerHTML = `${size} x ${size}`
 }
 
 // onload
